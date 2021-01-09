@@ -1,11 +1,8 @@
-# redux-boilerplate
+# react-redux-chat
+## Fake Slack
 
-Simple React + Redux starter with the following config:
+Simple React + Redux slack copycat, emojis supported.
 
-- React, ReactDOM
-- Redux, React-Redux
-- Webpack 3
-- Babel with es2015 and react presets
-- Bootstrap (css only, loaded from a cdn in `index.html`)
-- work with `.js` or `.jsx` files
-- main `application.scss` stylesheet is imported in `index.js` as a module to enjoy hot reloading
+Consuming Le Wagon's chat API build on Rails (https://wagon-chat.herokuapp.com/)
+
+TODO: Emoji picker

@@ -31,6 +31,7 @@ class MessageForm extends Component {
           type="text"
           className="form-control"
           autoComplete="off"
+          placeholder="Hello world!!!"
           value={this.state.value}
           onChange={this.handleChange}
         />

@@ -1,6 +1,7 @@
 import React from 'react';
 import ChannelList from '../containers/channel_list';
 import MessageList from '../containers/message_list';
+//import 'emoji-mart/css/emoji-mart.css';
 
 const App = () => {
   return (

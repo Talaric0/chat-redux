@@ -1,15 +1,24 @@
+const webpack = require('webpack');
+const dotenv = require('dotenv');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-module.exports = {
-  output: {
+module.exports = () => {
+  const env = dotenv.config().parsed;
+  const envKeys = Object.keys(env).reduce((prev, next) => {
+    prev[`process.env.${next}`] = JSON.stringify(env[next]);
+    return prev;
+  }, {});
+
+  return { output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: '!!html-loader!templates/index.html'
-    })
+    }),
+    new webpack.DefinePlugin(envKeys)
   ],
   devtool: 'sourcemap',
   module: {
@@ -22,15 +31,15 @@ module.exports = {
       {
         test: /\.s?css$/,
         exclude: /node_modules/,
-        loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.html$/,
         loader: 'html-loader'
-      },
+      }
     ]
   },
   resolve: {
-    extensions: [ '.js', '.jsx' ]
-  }
+    extensions: ['.js', '.jsx']
+  } };
 };

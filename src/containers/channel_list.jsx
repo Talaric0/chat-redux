@@ -30,8 +30,9 @@ class ChannelList extends Component {
   render() {
     return (
       <div className="channels-container">
-        <span>Redux Chat</span>
+        <span>Fake Slack</span>
         <ul>
+          <li id="channels-subtitle">Chats</li>
           {this.props.channels.map(this.renderChannel)}
         </ul>
       </div>

@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="messaging-wrapper">
       <div className="logo-container">
-        <img className="messaging-logo" src="assets/images/logo.png" alt="logo" />
+        <img className="messaging-logo" src="../assets/images/logo.png" alt="logo" />
       </div>
       <ChannelList />
       <MessageList />

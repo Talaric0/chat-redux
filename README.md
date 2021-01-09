@@ -1,7 +1,7 @@
 # react-redux-chat
 ## Fake Slack
 
-# https://talaric0.github.io/chat-redux/
+## https://talaric0.github.io/chat-redux/
 
 Simple React + Redux slack copycat, emojis supported.
 
